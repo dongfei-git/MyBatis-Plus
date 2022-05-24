@@ -1,6 +1,8 @@
 package tech.dongfei.mybatisplus.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import tech.dongfei.mybatisplus.pojo.User;
 
@@ -15,5 +17,13 @@ public interface UserMapper extends BaseMapper<User> {
      * @return
      */
     Map<String,Object> selectMapById(Long id);
+
+    /**
+     * 根据年龄查询用户信息并分页
+     * @param page
+     * @param age
+     * @return
+     */
+    Page<User> selectPageVo(@Param("page") Page<User> page,@Param("age") Integer age);
 
 }
