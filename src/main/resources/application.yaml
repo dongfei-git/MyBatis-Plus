@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.100.100:3306/mybatis_plus?characterEncoding=utf-8&userSSL=false
+    username: root
+    password: root
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #设置mybatis-plus的全局配置
+  global-config:
+    db-config:
+      table-prefix: t_  #设置表前缀
+      id-type: auto  #设置表id自增，默认为雪花算法生成id
