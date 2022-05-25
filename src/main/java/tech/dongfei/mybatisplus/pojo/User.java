@@ -2,6 +2,7 @@ package tech.dongfei.mybatisplus.pojo;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;
+import tech.dongfei.mybatisplus.enums.SexEnum;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,6 +20,8 @@ public class User {
     private String name;
 
     private Integer age;
+
+    private SexEnum sex;
 
     private String email;
 

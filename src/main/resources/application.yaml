@@ -15,3 +15,4 @@ mybatis-plus:
       table-prefix: t_  #设置表前缀
       id-type: auto  #设置表id自增，默认为雪花算法生成id
   type-aliases-package: tech.dongfei.mybatisplus.pojo
+  type-enums-package: tech.dongfei.mybatisplus.enums  #扫描通用枚举包
